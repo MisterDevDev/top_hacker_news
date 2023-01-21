@@ -1,5 +1,4 @@
 import Head from "next/head";
-import styles from "@/styles/Home.module.css";
 import { story } from "@/typings";
 import { HomeContainer } from "@/components/HomeContainer";
 
@@ -7,7 +6,7 @@ interface Props {
   topStories: story[];
 }
 
-export default function Home(props: Props) {
+export default function HomePage(props: Props) {
   return (
     <>
       <Head>
@@ -22,16 +21,13 @@ export default function Home(props: Props) {
 }
 
 export async function getServerSideProps() {
-  const topStoryIdRes =
-    await fetch(`https://hacker-news.firebaseio.com/v0/beststories.json? 
+  const topStoryIdRes = await fetch(`https://hacker-news.firebaseio.com/v0/beststories.json? 
   print=pretty&orderBy="$key"&limitToFirst=100`);
 
   const topStoryIds = await topStoryIdRes.json();
 
   const fetchList = topStoryIds.map((id: number) => {
-    return fetch(
-      `https://hacker-news.firebaseio.com/v0/item/${id}.json?print=pretty`
-    );
+    return fetch(`https://hacker-news.firebaseio.com/v0/item/${id}.json?print=pretty`);
   });
 
   const topStoriesRes = await Promise.all(fetchList);
