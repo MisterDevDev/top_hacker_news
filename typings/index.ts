@@ -1,12 +1,23 @@
-export interface story {
+interface IItem {
   by: string;
-  descendants: number;
   id: number;
-  kids: number[];
+  time: number;
+  type: 'story' | 'comment' | 'job' | 'poll' | 'pollopt'
+}
+
+export interface IStory extends IItem {
+  descendants: number;
+  kids?: number[];
   score: number;
   text?: string;
-  time: number;
   title: string;
-  type: string;
   url: string;
+  type: 'story'
+}
+
+export interface IComment extends IItem {
+  kids?: number[];
+  parent: number;
+  text: string;
+  type: 'comment'
 }

@@ -12,7 +12,7 @@ export const StyledColoredTitle = styled.small`
     rgb(255, 183, 107) 0%,
     rgb(255, 167, 61) 30%,
     rgb(255, 124, 0) 60%,
-    rgb(255, 127, 4) 100%
+    rgb(255, 117, 1) 100%
   )
   text;
 `;
@@ -20,8 +20,6 @@ export const StyledColoredTitle = styled.small`
 export const StyledTitleSection = styled.section`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   padding: 1rem;
   h2 {
     margin-bottom: 25px;
@@ -32,6 +30,7 @@ export const StyledTitle = styled.h1`
   font-weight: 900;
   margin: 0;
   font-size: min(14vw, 72px);
+  text-align: center;
   @media only screen and (max-width: 768px) {
     font-size: 2.5rem;
   }

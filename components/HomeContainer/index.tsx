@@ -1,18 +1,14 @@
-import { story } from "@/typings";
+import { IStory } from "@/typings";
 import * as Styles from "./styles";
-import dayjs from "dayjs";
-import relativeTime from "dayjs/plugin/relativeTime";
 import { StoryCard } from "../StoryCard";
 
-dayjs.extend(relativeTime);
-
 interface Props {
-  topStories: story[];
+  topStories: IStory[];
 }
 
 export const HomeContainer = (props: Props) => {
   return (
-    <main style={{ textAlign: "center" }}>
+    <main>
       {renderTitleSection()}
       {renderStoryContainer()}
     </main>
@@ -35,7 +31,7 @@ export const HomeContainer = (props: Props) => {
   function renderStories() {
     return (
       <>
-        {props.topStories.map((story: story) => {
+        {props.topStories.map((story: IStory) => {
           return <StoryCard story={story} key={story.id} />;
         })}
       </>

@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const StyledStoryCard = styled.div`
-  text-align: center;
   flex: 1;
   border: 1px solid ${({ theme }) => theme.BACKGROUND_MODIFIER_ACCENT};
   background: rgb(9, 4, 66);
@@ -13,9 +12,15 @@ export const StyledStoryCard = styled.div`
   );
   border-radius: 6px;
   padding: 16px;
-  width: 75%;
+  width: 30rem;
   margin: 2rem;
   position: relative;
+
+  @media only screen and (max-width: 768px) {
+    width: 85%;
+  }
+
+  }
 `;
 
 export const StyledStoryTitle = styled.div`
@@ -23,45 +28,63 @@ export const StyledStoryTitle = styled.div`
   font-size: 1.5rem;
   padding: 1rem 0 2rem;
   letter-spacing: 1px;
-  align-text: center;
-`;
-
-export const StyledStoryFooter = styled.span`
-  width: auto;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  text-align: center;
 `;
 
 export const StyledReadMore = styled.span`
   width: auto;
   position: absolute;
-  top: 0;
+  bottom: 0;
   right: 0;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 5%;
 `;
 
-// export const StyledStoryType = styled.span`
-//   width: auto;
-//   position: absolute;
-//   bottom: 0;
-//   right: 0;
-//   padding: 16px 1rem;
-// `;
+export const StyledStoryBy = styled.div``;
+
+export const StyledTimeStamp = styled.div``;
+
+export const StyledStoryHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+interface IFooterProps {
+  isOpen: boolean;
+}
+
+export const StyledStoryFooter = styled.div<IFooterProps>`
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  border-bottom: ${props => {
+    return props.isOpen ? `1px solid ${props.theme.BLACK_LIGHT}` : "none";
+  }};
+`;
+
+export const StyledViewComments = styled.span`
+  width: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0.5rem 5%;
+`;
 
 export const StoryTextContainer = styled.div`
+  width: 100%;
   margin-top: 1rem;
   overflow-y: scroll;
+  overflow-wrap: anywhere;
   max-height: 15vh;
   font-size: 1.1rem;
   font-weight: initial;
+
   ::-webkit-scrollbar {
     width: 5px;
     background-color: #aaa;
   }
 
   ::-webkit-scrollbar-track {
+    padding-left: 1rem;
     background: #f1f1f1;
   }
 

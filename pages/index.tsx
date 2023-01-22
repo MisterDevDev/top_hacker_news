@@ -1,9 +1,9 @@
 import Head from "next/head";
-import { story } from "@/typings";
+import { IStory } from "@/typings";
 import { HomeContainer } from "@/components/HomeContainer";
 
 interface Props {
-  topStories: story[];
+  topStories: IStory[];
 }
 
 export default function HomePage(props: Props) {
