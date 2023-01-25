@@ -20,10 +20,15 @@ export const StoryCard = (props: Props) => {
   return <>{renderStoryCard()}</>;
 
   function renderStoryCard() {
+    if (props.story.deleted) return <></>;
     return (
       <Styles.StyledStoryCard key={props.story.id}>
-        {showText && renderStoryText()}
-        {!showText && renderStory()}
+        <Styles.StyledContentContainer>
+          {renderHeader()}
+          {renderStoryText()}
+          {!showText && renderStory()}
+        </Styles.StyledContentContainer>
+        {!showText && renderComments()}
       </Styles.StyledStoryCard>
     );
   }
@@ -31,8 +36,9 @@ export const StoryCard = (props: Props) => {
   function renderStoryText() {
     return (
       <>
-        {renderHeader()}
-        <Styles.StoryTextContainer>{HTMLparse(props.story.text ?? "")}</Styles.StoryTextContainer>
+        <Styles.StyledTextContainer isOpen={showText}>
+          {HTMLparse(props.story.text ?? "")}
+        </Styles.StyledTextContainer>
       </>
     );
   }
@@ -40,19 +46,20 @@ export const StoryCard = (props: Props) => {
   function renderStory() {
     return (
       <>
-        {renderHeader()}
         {renderBody()}
         {renderFooter()}
-        {renderComments()}
       </>
     );
   }
 
   function renderHeader() {
+    const websiteText = getWebsite();
     return (
       <Styles.StyledStoryHeader>
         <Styles.StyledStoryBy>
-          {props.story.score + " points by " + props.story.by} <br /> {getWebsite()}
+          {props.story.score + " points by "}
+          <Styles.StyledAuthorSpan>{props.story.by}</Styles.StyledAuthorSpan> <br />
+          {websiteText && "(" + websiteText + ")"}
         </Styles.StyledStoryBy>
         {props.story.text && renderTextIcon()}
       </Styles.StyledStoryHeader>
@@ -61,23 +68,31 @@ export const StoryCard = (props: Props) => {
 
   function renderTextIcon() {
     return showText ? (
-      <IoMdClose size={18} onClick={() => setShowText(false)} />
+      <Styles.StyledHoverSpan>
+        <IoMdClose size={18} onClick={() => setShowText(false)} />
+      </Styles.StyledHoverSpan>
     ) : (
-      <IoMdEye size={18} onClick={() => setShowText(true)} />
+      <Styles.StyledHoverSpan>
+        <IoMdEye size={18} onClick={() => setShowText(true)} />
+      </Styles.StyledHoverSpan>
     );
   }
 
   function renderBody() {
-    return <Styles.StyledStoryTitle>{props.story.title}</Styles.StyledStoryTitle>;
+    return (
+      <Styles.StyledStoryTitle onClick={() => openWebsite()}>
+        <Styles.StyledHoverSpan>{props.story.title}</Styles.StyledHoverSpan>
+      </Styles.StyledStoryTitle>
+    );
   }
 
   function renderFooter() {
     return (
       <Styles.StyledStoryFooter isOpen={showComments}>
-        <div onClick={() => setShowComments(!showComments)}>
+        <Styles.StyledHoverSpan onClick={() => setShowComments(!showComments)}>
           {showComments ? "Close Comments" : "View " + props.story.descendants + " Comments"}
-        </div>
-        <Styles.StyledTimeStamp>{getTime()}</Styles.StyledTimeStamp>
+        </Styles.StyledHoverSpan>
+        <span>{getTime()}</span>
       </Styles.StyledStoryFooter>
     );
   }
@@ -96,9 +111,13 @@ export const StoryCard = (props: Props) => {
   function getWebsite() {
     try {
       const urlString = new URL(props.story.url).hostname;
-      return urlString.replace(/^www\./, "");
+      return urlString.replace(/^www\./, "").trim();
     } catch (error) {
       return "";
     }
+  }
+
+  function openWebsite() {
+    window.open(props.story.url);
   }
 };

@@ -60,6 +60,14 @@ const GlobalStyle = createGlobalStyle`
     cursor: pointer;
     font-weight: 800;
   }
+
+  #tsparticles {
+  height: 50vh;
+  width: 100%;
+  position: absolute;
+}
+
+
 `;
 
 export default GlobalStyle;

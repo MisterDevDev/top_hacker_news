@@ -12,46 +12,50 @@ dayjs.extend(relativeTime);
 
 interface Props {
   kid_id: number;
+  isNestedReply: boolean;
 }
 
 export const Comment = (props: Props) => {
   const [comment, setComment] = useState<IComment | undefined>();
   const [showReplies, setShowReplies] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     (async () => {
+      setLoading(true);
       const request = `https://hacker-news.firebaseio.com/v0/item/${props.kid_id}.json?print=pretty`;
       const response = await fetch(request);
       setComment(await response.json());
+      setLoading(false);
     })();
   }, [props.kid_id]);
 
-  return (
-    <>
-      {renderComment()}
-      {renderReplies()}
-    </>
-  );
+  return <>{renderComment()}</>;
 
   function renderComment() {
+    if (comment?.deleted) return <>{renderDeletedComment()}</>;
+    if (loading) return <>{renderLoading()}</>;
     return (
-      <Styles.StyledCommentContainer>
-        {renderAuthor()}
-        {renderText()}
-      </Styles.StyledCommentContainer>
+      <>
+        <Styles.StyledCommentContainer loading={loading ? 1 : 0}>
+          {renderAuthor()}
+          {renderText()}
+        </Styles.StyledCommentContainer>
+        {renderReplies()}
+      </>
     );
   }
 
   function renderAuthor() {
     return (
-      <div style={{ paddingBottom: "5px", color: "#c4c4c4" }}>
-        <b>{(comment?.by ?? "") + " " + getTime()}</b>
-      </div>
+      <Styles.StyledAuthorContainer>
+        <Styles.StyledAuthorSpan>{comment?.by ?? ""}</Styles.StyledAuthorSpan> {" " + getTime()}
+      </Styles.StyledAuthorContainer>
     );
   }
 
   function renderText() {
-    return <span>{HTMLparse(comment?.text ?? "")}</span>;
+    return <Styles.StyledParsedSpan>{HTMLparse(comment?.text ?? "")}</Styles.StyledParsedSpan>;
   }
 
   function getTime() {
@@ -66,16 +70,20 @@ export const Comment = (props: Props) => {
       return (
         <>
           {!showReplies && (
-            <div style={{ textAlign: "right" }}>
+            <Styles.StyledReplyLink>
               <IoIosReturnRight size={18} />
-              <span onClick={() => setShowReplies(true)}>{comment.kids.length + getReply()}</span>
-            </div>
+              <Styles.StyledHoverSpan onClick={() => setShowReplies(true)}>
+                {comment.kids.length + getReply()}
+              </Styles.StyledHoverSpan>
+            </Styles.StyledReplyLink>
           )}
-          {showReplies && (
-            <div style={{ textAlign: "right" }}>
+          {showReplies && !props.isNestedReply && (
+            <Styles.StyledReplyLink>
               <CgCornerUpRight size={18} />
-              <span onClick={() => setShowReplies(false)}>{"Close " + getReply()}</span>
-            </div>
+              <Styles.StyledHoverSpan onClick={() => setShowReplies(false)}>
+                {"Close " + getReply()}
+              </Styles.StyledHoverSpan>
+            </Styles.StyledReplyLink>
           )}
           {showReplies && (
             <Styles.StyledReplyContainer>
@@ -89,5 +97,19 @@ export const Comment = (props: Props) => {
 
   function getReply() {
     return (comment?.kids?.length ?? 0) > 1 ? " Replies" : " Reply";
+  }
+
+  function renderDeletedComment() {
+    <Styles.StyledCommentContainer loading={loading ? 1 : 0}>
+      <span>
+        <i>Post Deleted</i>
+      </span>
+    </Styles.StyledCommentContainer>;
+  }
+
+  function renderLoading() {
+    <Styles.StyledCommentContainer loading={loading ? 1 : 0}>
+      <span>Loading...</span>
+    </Styles.StyledCommentContainer>;
   }
 };

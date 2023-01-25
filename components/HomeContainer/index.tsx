@@ -1,6 +1,7 @@
 import { IStory } from "@/typings";
 import * as Styles from "./styles";
 import { StoryCard } from "../StoryCard";
+import { HeroParticles } from "./Particles";
 
 interface Props {
   topStories: IStory[];
@@ -16,11 +17,12 @@ export const HomeContainer = (props: Props) => {
 
   function renderTitleSection() {
     return (
-      <Styles.StyledTitleSection id="main">
-        <Styles.StyledTitle>
-          <Styles.StyledGradientText>Hacker News</Styles.StyledGradientText>
-        </Styles.StyledTitle>
-      </Styles.StyledTitleSection>
+      <>
+        <HeroParticles />
+        <Styles.StyledHeroArea>
+          <Styles.StyledTitle>Hacker News</Styles.StyledTitle>
+        </Styles.StyledHeroArea>
+      </>
     );
   }
 
@@ -29,6 +31,7 @@ export const HomeContainer = (props: Props) => {
   }
 
   function renderStories() {
+    console.log("home containers data => ", props.topStories);
     return (
       <>
         {props.topStories.map((story: IStory) => {

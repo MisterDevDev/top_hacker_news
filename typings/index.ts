@@ -1,7 +1,8 @@
 interface IItem {
-  by: string;
+  by?: string;
   id: number;
   time: number;
+  deleted?: boolean
   type: 'story' | 'comment' | 'job' | 'poll' | 'pollopt'
 }
 

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const StyledStoryCard = styled.div`
   flex: 1;
@@ -11,24 +11,30 @@ export const StyledStoryCard = styled.div`
     rgba(22, 12, 82, 0.6012998949579832) 100%
   );
   border-radius: 6px;
-  padding: 16px;
-  width: 30rem;
   margin: 2rem;
   position: relative;
+  width: 60%;
 
   @media only screen and (max-width: 768px) {
-    width: 85%;
-  }
-
+    width: 90%;
   }
 `;
 
-export const StyledStoryTitle = styled.div`
+export const StyledStoryTitle = styled.h2`
   font-weight: 700;
   font-size: 1.5rem;
   padding: 1rem 0 2rem;
   letter-spacing: 1px;
   text-align: center;
+`;
+
+export const StyledHoverSpan = styled.span`
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-color: #e1e1e1;
+    text-decoration-thickness: 0.5px;
+  }
 `;
 
 export const StyledReadMore = styled.span`
@@ -41,11 +47,23 @@ export const StyledReadMore = styled.span`
 
 export const StyledStoryBy = styled.div``;
 
-export const StyledTimeStamp = styled.div``;
-
 export const StyledStoryHeader = styled.div`
   display: flex;
   justify-content: space-between;
+`;
+
+export const StyledContentContainer = styled.div`
+  padding: 24px 10%;
+  transition: transform 250ms;
+
+  &:hover {
+    transform: translateY(-1px);
+    background-color: rgb(32, 28, 82);
+  }
+
+  @media only screen and (max-width: 768px) {
+    padding: 12px 24px;
+  }
 `;
 
 interface IFooterProps {
@@ -55,7 +73,6 @@ interface IFooterProps {
 export const StyledStoryFooter = styled.div<IFooterProps>`
   display: flex;
   justify-content: space-between;
-  padding-bottom: 1rem;
   border-bottom: ${props => {
     return props.isOpen ? `1px solid ${props.theme.BLACK_LIGHT}` : "none";
   }};
@@ -69,12 +86,14 @@ export const StyledViewComments = styled.span`
   padding: 0.5rem 5%;
 `;
 
-export const StoryTextContainer = styled.div`
+interface ITextContainerProps {
+  isOpen: boolean;
+}
+
+export const StyledTextContainer = styled.div<ITextContainerProps>`
   width: 100%;
-  margin-top: 1rem;
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-wrap: anywhere;
-  max-height: 15vh;
   font-size: 1.1rem;
   font-weight: initial;
 
@@ -91,4 +110,24 @@ export const StoryTextContainer = styled.div`
   ::-webkit-scrollbar-thumb {
     background: #888;
   }
+
+  transition: all 0.5s ease-in;
+
+  max-height: ${props => {
+    return props.isOpen ? `80vh` : "0";
+  }};
+
+  opacity: ${props => {
+    return props.isOpen ? `100%` : "0";
+  }};
+
+  padding-top: ${props => {
+    return props.isOpen ? `1.5rem` : "0";
+  }};
+`;
+
+export const StyledAuthorSpan = styled.span`
+  color: #e9967a;
+  font-weight: bold;
+  font-size: 1.1em;
 `;

@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+import img from "../../public/hacker_news_hero.jpg";
 
 export const StyledStoryContainer = styled.div`
   flex-direction: column;
@@ -6,31 +7,11 @@ export const StyledStoryContainer = styled.div`
   display: flex;
 `;
 
-export const StyledColoredTitle = styled.small`
-  linear-gradient(
-    to right,
-    rgb(255, 183, 107) 0%,
-    rgb(255, 167, 61) 30%,
-    rgb(255, 124, 0) 60%,
-    rgb(255, 117, 1) 100%
-  )
-  text;
-`;
-
-export const StyledTitleSection = styled.section`
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  h2 {
-    margin-bottom: 25px;
-  }
-`;
-
 export const StyledTitle = styled.h1`
   font-weight: 900;
   margin: 0;
   font-size: min(14vw, 72px);
-  text-align: center;
+  filter: brightness(100%);
   @media only screen and (max-width: 768px) {
     font-size: 2.5rem;
   }
@@ -42,4 +23,28 @@ export const StyledGradientText = styled.span`
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+`;
+
+export const StyledHeroArea = styled.section`
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  width: 100%;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(${img.src});
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 50%;
+  }
 `;
