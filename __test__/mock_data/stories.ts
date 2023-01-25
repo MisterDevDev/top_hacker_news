@@ -1,6 +1,8 @@
-export const mockStories = JSON.stringify(getMockStories());
+import { IStory } from "@/typings";
 
-function getMockStories() {
+export const mockStories: IStory[] = getMockStories();
+
+function getMockStories(): IStory[] {
   return [
     {
       by: "fileeditview",

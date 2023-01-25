@@ -2,8 +2,8 @@ interface IItem {
   by?: string;
   id: number;
   time: number;
-  deleted?: boolean
-  type: 'story' | 'comment' | 'job' | 'poll' | 'pollopt'
+  deleted?: boolean;
+  type: "story" | "comment" | "job" | "poll" | "pollopt";
 }
 
 export interface IStory extends IItem {
@@ -12,13 +12,13 @@ export interface IStory extends IItem {
   score: number;
   text?: string;
   title: string;
-  url: string;
-  type: 'story'
+  url?: string;
+  type: "story";
 }
 
 export interface IComment extends IItem {
   kids?: number[];
   parent: number;
   text: string;
-  type: 'comment'
+  type: "comment";
 }

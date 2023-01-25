@@ -17,6 +17,26 @@ export const StyledTitle = styled.h1`
   }
 `;
 
+export const StyledStoryCard = styled.div`
+  flex: 1;
+  border: 1px solid ${({ theme }) => theme.BACKGROUND_MODIFIER_ACCENT};
+  background: rgb(9, 4, 66);
+  background: linear-gradient(
+    138deg,
+    rgba(16, 8, 80, 0.8870141806722689) 0%,
+    rgba(30, 16, 94, 0.40802258403361347) 33%,
+    rgba(22, 12, 82, 0.6012998949579832) 100%
+  );
+  border-radius: 6px;
+  margin: 2rem;
+  position: relative;
+  width: 60%;
+
+  @media only screen and (max-width: 768px) {
+    width: 90%;
+  }
+`;
+
 export const StyledGradientText = styled.span`
   background: #ff7f04;
   background: linear-gradient(to right, #ff7f04 0%, #fc830d 30%, #fc8714 70%, #f78b20 100%);

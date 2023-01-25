@@ -20,16 +20,15 @@ export const StoryCard = (props: Props) => {
   return <>{renderStoryCard()}</>;
 
   function renderStoryCard() {
-    if (props.story.deleted) return <></>;
     return (
-      <Styles.StyledStoryCard key={props.story.id}>
+      <>
         <Styles.StyledContentContainer>
           {renderHeader()}
           {renderStoryText()}
           {!showText && renderStory()}
         </Styles.StyledContentContainer>
         {!showText && renderComments()}
-      </Styles.StyledStoryCard>
+      </>
     );
   }
 

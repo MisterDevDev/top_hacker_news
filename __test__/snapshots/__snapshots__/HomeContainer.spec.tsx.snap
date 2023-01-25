@@ -1,0 +1,508 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`changes the class when hovered 1`] = `
+<main>
+  <div
+    id="tsparticles"
+  >
+    <canvas
+      style={
+        {
+          "height": "100%",
+          "width": "100%",
+        }
+      }
+    />
+  </div>
+  <section
+    className="sc-eDvSVe imJovy"
+  >
+    <h1
+      className="sc-gswNZR fUNhtK"
+    >
+      Hacker News
+    </h1>
+  </section>
+  <div
+    className="sc-bcXHqe fufuNP"
+  >
+    <div
+      className="sc-dkrFOg ZdEHA"
+    >
+      <div>
+        <div
+          className="sc-kDvujY gbNWAm"
+        >
+          <div
+            className="sc-jrcTuL irwjLS"
+          >
+            <div
+              className="sc-pyfCe"
+            >
+              1666 points by 
+              <span
+                className="sc-bqWxrE fNkYYh"
+              >
+                fileeditview
+              </span>
+               
+              <br />
+              (kentnerburn.com)
+            </div>
+          </div>
+          <div
+            className="sc-eDWCr cxkhV"
+          />
+          <h2
+            className="sc-gKPRtg boVKvv"
+            onClick={[Function]}
+          >
+            <span
+              className="sc-iBYQkv hGcsIc"
+            >
+              A cab ride I'll never forget (1999)
+            </span>
+          </h2>
+          <div
+            className="sc-ipEyDJ bheiSH"
+          >
+            <span
+              className="sc-iBYQkv hGcsIc"
+              onClick={[Function]}
+            >
+              View 163 Comments
+            </span>
+            <span>
+              Jan 16, 2023
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-dkrFOg ZdEHA"
+    >
+      <div>
+        <div
+          className="sc-kDvujY gbNWAm"
+        >
+          <div
+            className="sc-jrcTuL irwjLS"
+          >
+            <div
+              className="sc-pyfCe"
+            >
+              1297 points by 
+              <span
+                className="sc-bqWxrE fNkYYh"
+              >
+                colesantiago
+              </span>
+               
+              <br />
+              (blog.google)
+            </div>
+          </div>
+          <div
+            className="sc-eDWCr cxkhV"
+          />
+          <h2
+            className="sc-gKPRtg boVKvv"
+            onClick={[Function]}
+          >
+            <span
+              className="sc-iBYQkv hGcsIc"
+            >
+              Google to reduce workforce by 12k
+            </span>
+          </h2>
+          <div
+            className="sc-ipEyDJ bheiSH"
+          >
+            <span
+              className="sc-iBYQkv hGcsIc"
+              onClick={[Function]}
+            >
+              View 1349 Comments
+            </span>
+            <span>
+              Jan 20, 2023
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-dkrFOg ZdEHA"
+    >
+      <div>
+        <div
+          className="sc-kDvujY gbNWAm"
+        >
+          <div
+            className="sc-jrcTuL irwjLS"
+          >
+            <div
+              className="sc-pyfCe"
+            >
+              1071 points by 
+              <span
+                className="sc-bqWxrE fNkYYh"
+              >
+                georgehill
+              </span>
+               
+              <br />
+              (youtube.com)
+            </div>
+          </div>
+          <div
+            className="sc-eDWCr cxkhV"
+          />
+          <h2
+            className="sc-gKPRtg boVKvv"
+            onClick={[Function]}
+          >
+            <span
+              className="sc-iBYQkv hGcsIc"
+            >
+              Let's build GPT: from scratch, in code, spelled out by Andrej Karpathy [video]
+            </span>
+          </h2>
+          <div
+            className="sc-ipEyDJ bheiSH"
+          >
+            <span
+              className="sc-iBYQkv hGcsIc"
+              onClick={[Function]}
+            >
+              View 101 Comments
+            </span>
+            <span>
+              Jan 17, 2023
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-dkrFOg ZdEHA"
+    >
+      <div>
+        <div
+          className="sc-kDvujY gbNWAm"
+        >
+          <div
+            className="sc-jrcTuL irwjLS"
+          >
+            <div
+              className="sc-pyfCe"
+            >
+              885 points by 
+              <span
+                className="sc-bqWxrE fNkYYh"
+              >
+                half-kh-hacker
+              </span>
+               
+              <br />
+              (maia.crimew.gay)
+            </div>
+          </div>
+          <div
+            className="sc-eDWCr cxkhV"
+          />
+          <h2
+            className="sc-gKPRtg boVKvv"
+            onClick={[Function]}
+          >
+            <span
+              className="sc-iBYQkv hGcsIc"
+            >
+              How to own an airline in 3 easy steps and grab the TSA nofly list along the way
+            </span>
+          </h2>
+          <div
+            className="sc-ipEyDJ bheiSH"
+          >
+            <span
+              className="sc-iBYQkv hGcsIc"
+              onClick={[Function]}
+            >
+              View 547 Comments
+            </span>
+            <span>
+              Jan 19, 2023
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-dkrFOg ZdEHA"
+    >
+      <div>
+        <div
+          className="sc-kDvujY gbNWAm"
+        >
+          <div
+            className="sc-jrcTuL irwjLS"
+          >
+            <div
+              className="sc-pyfCe"
+            >
+              871 points by 
+              <span
+                className="sc-bqWxrE fNkYYh"
+              >
+                ColinWright
+              </span>
+               
+              <br />
+              (somethingorotherwhatever.com)
+            </div>
+          </div>
+          <div
+            className="sc-eDWCr cxkhV"
+          />
+          <h2
+            className="sc-gKPRtg boVKvv"
+            onClick={[Function]}
+          >
+            <span
+              className="sc-iBYQkv hGcsIc"
+            >
+              Wobbly clock
+            </span>
+          </h2>
+          <div
+            className="sc-ipEyDJ bheiSH"
+          >
+            <span
+              className="sc-iBYQkv hGcsIc"
+              onClick={[Function]}
+            >
+              View 195 Comments
+            </span>
+            <span>
+              Jan 16, 2023
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-dkrFOg ZdEHA"
+    >
+      <div>
+        <div
+          className="sc-kDvujY gbNWAm"
+        >
+          <div
+            className="sc-jrcTuL irwjLS"
+          >
+            <div
+              className="sc-pyfCe"
+            >
+              861 points by 
+              <span
+                className="sc-bqWxrE fNkYYh"
+              >
+                ValentineC
+              </span>
+               
+              <br />
+              (apple.com)
+            </div>
+          </div>
+          <div
+            className="sc-eDWCr cxkhV"
+          />
+          <h2
+            className="sc-gKPRtg boVKvv"
+            onClick={[Function]}
+          >
+            <span
+              className="sc-iBYQkv hGcsIc"
+            >
+              MacBook Pro featuring M2 Pro and M2 Max
+            </span>
+          </h2>
+          <div
+            className="sc-ipEyDJ bheiSH"
+          >
+            <span
+              className="sc-iBYQkv hGcsIc"
+              onClick={[Function]}
+            >
+              View 1025 Comments
+            </span>
+            <span>
+              Jan 17, 2023
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-dkrFOg ZdEHA"
+    >
+      <div>
+        <div
+          className="sc-kDvujY gbNWAm"
+        >
+          <div
+            className="sc-jrcTuL irwjLS"
+          >
+            <div
+              className="sc-pyfCe"
+            >
+              860 points by 
+              <span
+                className="sc-bqWxrE fNkYYh"
+              >
+                subharmonicon
+              </span>
+               
+              <br />
+              (smithsonianmag.com)
+            </div>
+          </div>
+          <div
+            className="sc-eDWCr cxkhV"
+          />
+          <h2
+            className="sc-gKPRtg boVKvv"
+            onClick={[Function]}
+          >
+            <span
+              className="sc-iBYQkv hGcsIc"
+            >
+              Photos capture life inside a drop of seawater
+            </span>
+          </h2>
+          <div
+            className="sc-ipEyDJ bheiSH"
+          >
+            <span
+              className="sc-iBYQkv hGcsIc"
+              onClick={[Function]}
+            >
+              View 187 Comments
+            </span>
+            <span>
+              Jan 19, 2023
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-dkrFOg ZdEHA"
+    >
+      <div>
+        <div
+          className="sc-kDvujY gbNWAm"
+        >
+          <div
+            className="sc-jrcTuL irwjLS"
+          >
+            <div
+              className="sc-pyfCe"
+            >
+              841 points by 
+              <span
+                className="sc-bqWxrE fNkYYh"
+              >
+                blegh
+              </span>
+               
+              <br />
+              (milk.com)
+            </div>
+          </div>
+          <div
+            className="sc-eDWCr cxkhV"
+          />
+          <h2
+            className="sc-gKPRtg boVKvv"
+            onClick={[Function]}
+          >
+            <span
+              className="sc-iBYQkv hGcsIc"
+            >
+              What not to write on your security clearance form (1988)
+            </span>
+          </h2>
+          <div
+            className="sc-ipEyDJ bheiSH"
+          >
+            <span
+              className="sc-iBYQkv hGcsIc"
+              onClick={[Function]}
+            >
+              View 531 Comments
+            </span>
+            <span>
+              Jan 19, 2023
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-dkrFOg ZdEHA"
+    >
+      <div>
+        <div
+          className="sc-kDvujY gbNWAm"
+        >
+          <div
+            className="sc-jrcTuL irwjLS"
+          >
+            <div
+              className="sc-pyfCe"
+            >
+              708 points by 
+              <span
+                className="sc-bqWxrE fNkYYh"
+              >
+                chazeon
+              </span>
+               
+              <br />
+              (furbo.org)
+            </div>
+          </div>
+          <div
+            className="sc-eDWCr cxkhV"
+          />
+          <h2
+            className="sc-gKPRtg boVKvv"
+            onClick={[Function]}
+          >
+            <span
+              className="sc-iBYQkv hGcsIc"
+            >
+              The Shit Show
+            </span>
+          </h2>
+          <div
+            className="sc-ipEyDJ bheiSH"
+          >
+            <span
+              className="sc-iBYQkv hGcsIc"
+              onClick={[Function]}
+            >
+              View 315 Comments
+            </span>
+            <span>
+              Jan 15, 2023
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+`;

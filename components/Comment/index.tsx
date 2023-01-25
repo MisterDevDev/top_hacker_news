@@ -18,26 +18,24 @@ interface Props {
 export const Comment = (props: Props) => {
   const [comment, setComment] = useState<IComment | undefined>();
   const [showReplies, setShowReplies] = useState(false);
-  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     (async () => {
-      setLoading(true);
       const request = `https://hacker-news.firebaseio.com/v0/item/${props.kid_id}.json?print=pretty`;
       const response = await fetch(request);
       setComment(await response.json());
-      setLoading(false);
     })();
   }, [props.kid_id]);
+
+  if (!comment) return <>{renderLoading()}</>;
 
   return <>{renderComment()}</>;
 
   function renderComment() {
     if (comment?.deleted) return <>{renderDeletedComment()}</>;
-    if (loading) return <>{renderLoading()}</>;
     return (
       <>
-        <Styles.StyledCommentContainer loading={loading ? 1 : 0}>
+        <Styles.StyledCommentContainer>
           {renderAuthor()}
           {renderText()}
         </Styles.StyledCommentContainer>
@@ -100,7 +98,7 @@ export const Comment = (props: Props) => {
   }
 
   function renderDeletedComment() {
-    <Styles.StyledCommentContainer loading={loading ? 1 : 0}>
+    <Styles.StyledCommentContainer>
       <span>
         <i>Post Deleted</i>
       </span>
@@ -108,7 +106,7 @@ export const Comment = (props: Props) => {
   }
 
   function renderLoading() {
-    <Styles.StyledCommentContainer loading={loading ? 1 : 0}>
+    <Styles.StyledCommentContainer>
       <span>Loading...</span>
     </Styles.StyledCommentContainer>;
   }

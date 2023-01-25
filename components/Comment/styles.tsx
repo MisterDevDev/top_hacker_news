@@ -1,10 +1,6 @@
 import styled from "styled-components";
 
-interface ICommentContainerProps {
-  loading: number;
-}
-
-export const StyledCommentContainer = styled.div<ICommentContainerProps>`
+export const StyledCommentContainer = styled.div`
   padding: 10px;
   font-weight: normal;
   font-size: 14px;
@@ -12,16 +8,6 @@ export const StyledCommentContainer = styled.div<ICommentContainerProps>`
   border-radius: 1rem;
   margin: 5px;
   word-wrap: break-word;
-
-  transition: all 0.3s ease-in;
-
-  max-height: ${props => {
-    return props.loading ? `10vh` : "auto";
-  }};
-
-  opacity: ${props => {
-    return props.loading ? `40%` : "100%";
-  }};
 `;
 
 export const StyledParsedSpan = styled.span`
