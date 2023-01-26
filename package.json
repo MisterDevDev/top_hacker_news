@@ -11,9 +11,10 @@
     "coverage": "jest --coverage"
   },
   "dependencies": {
+    "babel-jest": "^29.4.0",
     "dayjs": "^1.11.7",
     "html-react-parser": "^3.0.8",
-    "msw": "^1.0.0",
+    "jest-fetch-mock": "^3.0.3",
     "next": "13.1.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",

@@ -7,3 +7,7 @@ yarn dev
 # or
 pnpm dev
 ```
+
+## Run Test
+
+npm run test

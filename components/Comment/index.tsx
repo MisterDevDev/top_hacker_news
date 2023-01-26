@@ -12,7 +12,7 @@ dayjs.extend(relativeTime);
 
 interface Props {
   kid_id: number;
-  isNestedReply: boolean;
+  isNestedReply?: boolean;
 }
 
 export const Comment = (props: Props) => {
@@ -36,8 +36,10 @@ export const Comment = (props: Props) => {
     return (
       <>
         <Styles.StyledCommentContainer>
-          {renderAuthor()}
-          {renderText()}
+          <div aria-label="comment-section">
+            {renderAuthor()}
+            {renderText()}
+          </div>
         </Styles.StyledCommentContainer>
         {renderReplies()}
       </>

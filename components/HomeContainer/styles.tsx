@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import img from "../../public/hacker_news_hero.jpg";
 
 export const StyledStoryContainer = styled.div`
@@ -8,13 +8,39 @@ export const StyledStoryContainer = styled.div`
 `;
 
 export const StyledTitle = styled.h1`
-  font-weight: 900;
   margin: 0;
-  font-size: min(14vw, 72px);
+  font-size: 8em;
   filter: brightness(100%);
-  @media only screen and (max-width: 768px) {
-    font-size: 2.5rem;
-  }
+  background-image: linear-gradient(
+    ${({ theme }) => {
+      return `to right, ${theme.CRIMSON} 15%, ${theme.DARK_SALMON} 25%, ${theme.CRIMSON} 55%, ${theme.DARK_SALMON} 100%`;
+    }}
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+`;
+
+export const StyledGradientText = styled.h4`
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 3em;
+  filter: brightness(100%);
+  text-align: right;
+  background-image: linear-gradient(
+    ${({ theme }) => {
+      return `to right, ${theme.DANGER} 15%, ${theme.TEXT_DANGER} 25%, ${theme.DANGER} 55%, ${theme.TEXT_DANGER} 100%`;
+    }}
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+`;
+
+export const StyledSubtitleBox = styled.div`
+  position: relative;
+  padding: 80px;
 `;
 
 export const StyledStoryCard = styled.div`
@@ -37,17 +63,10 @@ export const StyledStoryCard = styled.div`
   }
 `;
 
-export const StyledGradientText = styled.span`
-  background: #ff7f04;
-  background: linear-gradient(to right, #ff7f04 0%, #fc830d 30%, #fc8714 70%, #f78b20 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-`;
-
 export const StyledHeroArea = styled.section`
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 50vh;

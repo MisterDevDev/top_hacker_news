@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StyledCommentContainer = styled.div`
   padding: 10px;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 15px;
   background-color: rgb(32, 28, 82);
   border-radius: 1rem;
   margin: 5px;
@@ -35,7 +35,6 @@ export const StyledHoverSpan = styled.span`
 
 export const StyledReplyLink = styled.div`
   text-align: right;
-  padding-bottom: 1em;
   padding-right: 1em;
 `;
 

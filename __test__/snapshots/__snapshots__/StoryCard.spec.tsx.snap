@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should display the number of replies 1`] = `
+<div
+  className="sc-gKPRtg gAfYod"
+>
+  <div
+    className="sc-jSUZER cZFivt"
+  >
+    <div
+      className="sc-eDvSVe"
+    >
+      1666 points by 
+      <span
+        className="sc-jrcTuL bqdlzo"
+      >
+        fileeditview
+      </span>
+       
+      <br />
+      (kentnerburn.com)
+    </div>
+  </div>
+  <div
+    className="sc-pyfCe bhIOqv"
+  />
+  <h2
+    className="sc-gswNZR cTaXQj"
+    onClick={[Function]}
+  >
+    <span
+      className="sc-dkrFOg jnxTdB"
+    >
+      A cab ride I'll never forget (1999)
+    </span>
+  </h2>
+  <div
+    className="sc-iBYQkv iNbZIm"
+  >
+    <span
+      className="sc-dkrFOg jnxTdB"
+      onClick={[Function]}
+    >
+      View 3 Comments
+    </span>
+    <span
+      aria-label="posted-time"
+    >
+      Jan 16, 2023
+    </span>
+  </div>
+</div>
+`;

@@ -1,5 +1,7 @@
 // jest.config.js
 const nextJest = require("next/jest");
+const { pathsToModuleNameMapper } = require("ts-jest");
+const { compilerOptions } = require("./tsconfig");
 
 const createJestConfig = nextJest({
   // Provide the path to your Next.js app to load next.config.js and .env files in your test environment
@@ -19,10 +21,11 @@ const customJestConfig = {
   // The paths have to be matching with the paths option within the compilerOptions in the tsconfig.json
   // For example:
 
-  moduleNameMapper: {
-    "@/(.*)$": "<rootDir>/pages/$1",
-    "@/(.*)$": "<rootDir>/components/$1",
-  },
+  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, { prefix: "<rootDir>/" }),
+  // moduleNameMapper: {
+  //   "@/(.*)$": "<rootDir>/pages/$1",
+  //   "@/(.*)$": "<rootDir>/components/$1",
+  // },
   testEnvironment: "jest-environment-jsdom",
 };
 

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Comment } from "../Comment";
 import * as Styles from "./styles";
+import { RxArrowUp } from "react-icons/rx";
 
 interface Props {
   kids: number[];
@@ -32,22 +33,22 @@ export const CommentsContainer = (props: Props) => {
   function renderMoreReplies() {
     return (
       <Styles.StyledHoverSpan
-        style={{ paddingLeft: "10px" }}
+        style={{ paddingLeft: "20px" }}
         onClick={() => setVisibleComments(visibleComments + 3)}
       >
-        More Replies
+        <RxArrowUp size={12} /> More Replies
       </Styles.StyledHoverSpan>
     );
   }
 
   function renderMoreComments() {
     return (
-      <Styles.StyledMoreComments>
+      <Styles.StyledMoreComments style={{ textAlign: "center" }}>
         <Styles.StyledHoverSpan
           style={{ paddingLeft: "10px" }}
           onClick={() => setVisibleComments(visibleComments + 3)}
         >
-          {props.isReply ? "More Replies" : "More Comments"}
+          More Comments
         </Styles.StyledHoverSpan>
       </Styles.StyledMoreComments>
     );

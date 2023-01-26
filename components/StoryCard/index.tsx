@@ -3,6 +3,7 @@ import * as Styles from "./styles";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 import { IoMdEye, IoMdClose } from "react-icons/io";
+import { RxEyeClosed } from "react-icons/rx";
 import { useState } from "react";
 import HTMLparse from "html-react-parser";
 import { CommentsContainer } from "../CommentsContainer";
@@ -16,6 +17,7 @@ interface Props {
 export const StoryCard = (props: Props) => {
   const [showText, setShowText] = useState(false);
   const [showComments, setShowComments] = useState(false);
+  const [eyeIsHovered, setEyeIsHovered] = useState(false);
 
   return <>{renderStoryCard()}</>;
 
@@ -71,13 +73,22 @@ export const StoryCard = (props: Props) => {
         <IoMdClose size={18} onClick={() => setShowText(false)} />
       </Styles.StyledHoverSpan>
     ) : (
-      <Styles.StyledHoverSpan>
-        <IoMdEye size={18} onClick={() => setShowText(true)} />
+      <Styles.StyledHoverSpan
+        onMouseEnter={() => setEyeIsHovered(true)}
+        onMouseLeave={() => setEyeIsHovered(false)}
+      >
+        {eyeIsHovered ? (
+          <IoMdEye size={18} onClick={() => setShowText(true)} />
+        ) : (
+          <RxEyeClosed size={18} onClick={() => setShowText(true)} />
+        )}
       </Styles.StyledHoverSpan>
     );
   }
 
   function renderBody() {
+    if (!(props.story.url?.trim() ?? null))
+      return <Styles.StyledStoryTitle>{props.story.title}</Styles.StyledStoryTitle>;
     return (
       <Styles.StyledStoryTitle onClick={() => openWebsite()}>
         <Styles.StyledHoverSpan>{props.story.title}</Styles.StyledHoverSpan>
@@ -91,7 +102,7 @@ export const StoryCard = (props: Props) => {
         <Styles.StyledHoverSpan onClick={() => setShowComments(!showComments)}>
           {showComments ? "Close Comments" : "View " + props.story.descendants + " Comments"}
         </Styles.StyledHoverSpan>
-        <span>{getTime()}</span>
+        <span aria-label="posted-time">{getTime()}</span>
       </Styles.StyledStoryFooter>
     );
   }
@@ -109,7 +120,7 @@ export const StoryCard = (props: Props) => {
 
   function getWebsite() {
     try {
-      const urlString = new URL(props.story.url).hostname;
+      const urlString = new URL(props.story?.url ?? "").hostname;
       return urlString.replace(/^www\./, "").trim();
     } catch (error) {
       return "";
@@ -117,6 +128,8 @@ export const StoryCard = (props: Props) => {
   }
 
   function openWebsite() {
-    window.open(props.story.url);
+    if (props.story.url) {
+      window.open(props.story.url);
+    }
   }
 };

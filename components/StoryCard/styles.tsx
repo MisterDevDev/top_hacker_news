@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
 export const StyledStoryCard = styled.div`
   flex: 1;
@@ -57,7 +57,6 @@ export const StyledContentContainer = styled.div`
   transition: transform 250ms;
 
   &:hover {
-    transform: translateY(-1px);
     background-color: rgb(32, 28, 82);
   }
 
@@ -74,7 +73,7 @@ export const StyledStoryFooter = styled.div<IFooterProps>`
   display: flex;
   justify-content: space-between;
   border-bottom: ${props => {
-    return props.isOpen ? `1px solid ${props.theme.BLACK_LIGHT}` : "none";
+    return props.isOpen ? `1.5px solid ${props.theme.BLACK_LIGHT}` : "none";
   }};
 `;
 

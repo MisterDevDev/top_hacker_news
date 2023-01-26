@@ -27,8 +27,6 @@ export const HomeContainer = (props: Props) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isVisible]);
 
-  console.log("is it visible? ", isVisible);
-
   return (
     <main>
       {renderTitleSection()}
@@ -45,7 +43,12 @@ export const HomeContainer = (props: Props) => {
       <>
         <HeroParticles />
         <Styles.StyledHeroArea>
-          <Styles.StyledTitle>Hacker News</Styles.StyledTitle>
+          <Styles.StyledSubtitleBox>
+            <Styles.StyledTitle>Hacker News</Styles.StyledTitle>
+            <Styles.StyledGradientText>
+              <i>Top 100</i>
+            </Styles.StyledGradientText>
+          </Styles.StyledSubtitleBox>
         </Styles.StyledHeroArea>
       </>
     );
@@ -60,10 +63,10 @@ export const HomeContainer = (props: Props) => {
       <>
         {props.topStories.map((story: IStory, idx) => {
           if (story.deleted) return <></>;
-          if (idx + 1 < visibleStories) {
+          if (idx + 1 === visibleStories) {
             return (
               <Styles.StyledStoryCard key={story.id}>
-                <div ref={lastStory}>
+                <div ref={lastStory} aria-label="news-story">
                   <StoryCard story={story} />
                 </div>
               </Styles.StyledStoryCard>
@@ -72,7 +75,9 @@ export const HomeContainer = (props: Props) => {
           if (idx + 1 < visibleStories) {
             return (
               <Styles.StyledStoryCard key={story.id}>
-                <StoryCard story={story} />;
+                <div aria-label="news-story">
+                  <StoryCard story={story} />
+                </div>
               </Styles.StyledStoryCard>
             );
           }

@@ -1,7 +1,14 @@
-import { IStory } from "@/typings";
 import { useState, useMemo, useEffect } from "react";
+import { MutableRefObject } from "react";
 
-export default function useObserveScreen(options: any, targetRef: any) {
+
+interface IntersectionObserverInit {
+  root?: Element | Document | null;
+  rootMargin?: string;
+  threshold?: number | number[];
+}
+
+export default function useObserveScreen(options: IntersectionObserverInit, targetRef: MutableRefObject<null | HTMLDivElement>) {
   const [isVisible, setIsVisible] = useState();
 
   const callbackFunction = (stories: any) => {

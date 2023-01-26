@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`changes the class when hovered 1`] = `
+exports[`Should render correctly 1`] = `
 <main>
   <div
     id="tsparticles"
@@ -15,33 +15,46 @@ exports[`changes the class when hovered 1`] = `
     />
   </div>
   <section
-    className="sc-eDvSVe imJovy"
+    className="sc-jSUZER hnBDmO"
   >
-    <h1
-      className="sc-gswNZR fUNhtK"
+    <div
+      className="sc-hLBbgP iqoPhb"
     >
-      Hacker News
-    </h1>
+      <h1
+        className="sc-gswNZR hPqQLD"
+      >
+        Hacker News
+      </h1>
+      <h4
+        className="sc-dkrFOg jFdKDg"
+      >
+        <i>
+          Top 100
+        </i>
+      </h4>
+    </div>
   </section>
   <div
     className="sc-bcXHqe fufuNP"
   >
     <div
-      className="sc-dkrFOg ZdEHA"
+      className="sc-eDvSVe erSdmQ"
     >
-      <div>
+      <div
+        aria-label="news-story"
+      >
         <div
-          className="sc-kDvujY gbNWAm"
+          className="sc-ipEyDJ KSSCD"
         >
           <div
-            className="sc-jrcTuL irwjLS"
+            className="sc-kDvujY faROvf"
           >
             <div
-              className="sc-pyfCe"
+              className="sc-jrcTuL"
             >
               1666 points by 
               <span
-                className="sc-bqWxrE fNkYYh"
+                className="sc-ksBlkl lbYNbX"
               >
                 fileeditview
               </span>
@@ -51,28 +64,30 @@ exports[`changes the class when hovered 1`] = `
             </div>
           </div>
           <div
-            className="sc-eDWCr cxkhV"
+            className="sc-bqWxrE gpQyvZ"
           />
           <h2
-            className="sc-gKPRtg boVKvv"
+            className="sc-iBYQkv iijhMY"
             onClick={[Function]}
           >
             <span
-              className="sc-iBYQkv hGcsIc"
+              className="sc-ftTHYK eunGkG"
             >
               A cab ride I'll never forget (1999)
             </span>
           </h2>
           <div
-            className="sc-ipEyDJ bheiSH"
+            className="sc-csuSiG fwVXDo"
           >
             <span
-              className="sc-iBYQkv hGcsIc"
+              className="sc-ftTHYK eunGkG"
               onClick={[Function]}
             >
-              View 163 Comments
+              View 3 Comments
             </span>
-            <span>
+            <span
+              aria-label="posted-time"
+            >
               Jan 16, 2023
             </span>
           </div>
@@ -80,21 +95,23 @@ exports[`changes the class when hovered 1`] = `
       </div>
     </div>
     <div
-      className="sc-dkrFOg ZdEHA"
+      className="sc-eDvSVe erSdmQ"
     >
-      <div>
+      <div
+        aria-label="news-story"
+      >
         <div
-          className="sc-kDvujY gbNWAm"
+          className="sc-ipEyDJ KSSCD"
         >
           <div
-            className="sc-jrcTuL irwjLS"
+            className="sc-kDvujY faROvf"
           >
             <div
-              className="sc-pyfCe"
+              className="sc-jrcTuL"
             >
               1297 points by 
               <span
-                className="sc-bqWxrE fNkYYh"
+                className="sc-ksBlkl lbYNbX"
               >
                 colesantiago
               </span>
@@ -104,28 +121,30 @@ exports[`changes the class when hovered 1`] = `
             </div>
           </div>
           <div
-            className="sc-eDWCr cxkhV"
+            className="sc-bqWxrE gpQyvZ"
           />
           <h2
-            className="sc-gKPRtg boVKvv"
+            className="sc-iBYQkv iijhMY"
             onClick={[Function]}
           >
             <span
-              className="sc-iBYQkv hGcsIc"
+              className="sc-ftTHYK eunGkG"
             >
               Google to reduce workforce by 12k
             </span>
           </h2>
           <div
-            className="sc-ipEyDJ bheiSH"
+            className="sc-csuSiG fwVXDo"
           >
             <span
-              className="sc-iBYQkv hGcsIc"
+              className="sc-ftTHYK eunGkG"
               onClick={[Function]}
             >
               View 1349 Comments
             </span>
-            <span>
+            <span
+              aria-label="posted-time"
+            >
               Jan 20, 2023
             </span>
           </div>
@@ -133,21 +152,23 @@ exports[`changes the class when hovered 1`] = `
       </div>
     </div>
     <div
-      className="sc-dkrFOg ZdEHA"
+      className="sc-eDvSVe erSdmQ"
     >
-      <div>
+      <div
+        aria-label="news-story"
+      >
         <div
-          className="sc-kDvujY gbNWAm"
+          className="sc-ipEyDJ KSSCD"
         >
           <div
-            className="sc-jrcTuL irwjLS"
+            className="sc-kDvujY faROvf"
           >
             <div
-              className="sc-pyfCe"
+              className="sc-jrcTuL"
             >
               1071 points by 
               <span
-                className="sc-bqWxrE fNkYYh"
+                className="sc-ksBlkl lbYNbX"
               >
                 georgehill
               </span>
@@ -157,28 +178,30 @@ exports[`changes the class when hovered 1`] = `
             </div>
           </div>
           <div
-            className="sc-eDWCr cxkhV"
+            className="sc-bqWxrE gpQyvZ"
           />
           <h2
-            className="sc-gKPRtg boVKvv"
+            className="sc-iBYQkv iijhMY"
             onClick={[Function]}
           >
             <span
-              className="sc-iBYQkv hGcsIc"
+              className="sc-ftTHYK eunGkG"
             >
               Let's build GPT: from scratch, in code, spelled out by Andrej Karpathy [video]
             </span>
           </h2>
           <div
-            className="sc-ipEyDJ bheiSH"
+            className="sc-csuSiG fwVXDo"
           >
             <span
-              className="sc-iBYQkv hGcsIc"
+              className="sc-ftTHYK eunGkG"
               onClick={[Function]}
             >
               View 101 Comments
             </span>
-            <span>
+            <span
+              aria-label="posted-time"
+            >
               Jan 17, 2023
             </span>
           </div>
@@ -186,21 +209,23 @@ exports[`changes the class when hovered 1`] = `
       </div>
     </div>
     <div
-      className="sc-dkrFOg ZdEHA"
+      className="sc-eDvSVe erSdmQ"
     >
-      <div>
+      <div
+        aria-label="news-story"
+      >
         <div
-          className="sc-kDvujY gbNWAm"
+          className="sc-ipEyDJ KSSCD"
         >
           <div
-            className="sc-jrcTuL irwjLS"
+            className="sc-kDvujY faROvf"
           >
             <div
-              className="sc-pyfCe"
+              className="sc-jrcTuL"
             >
               885 points by 
               <span
-                className="sc-bqWxrE fNkYYh"
+                className="sc-ksBlkl lbYNbX"
               >
                 half-kh-hacker
               </span>
@@ -210,28 +235,30 @@ exports[`changes the class when hovered 1`] = `
             </div>
           </div>
           <div
-            className="sc-eDWCr cxkhV"
+            className="sc-bqWxrE gpQyvZ"
           />
           <h2
-            className="sc-gKPRtg boVKvv"
+            className="sc-iBYQkv iijhMY"
             onClick={[Function]}
           >
             <span
-              className="sc-iBYQkv hGcsIc"
+              className="sc-ftTHYK eunGkG"
             >
               How to own an airline in 3 easy steps and grab the TSA nofly list along the way
             </span>
           </h2>
           <div
-            className="sc-ipEyDJ bheiSH"
+            className="sc-csuSiG fwVXDo"
           >
             <span
-              className="sc-iBYQkv hGcsIc"
+              className="sc-ftTHYK eunGkG"
               onClick={[Function]}
             >
               View 547 Comments
             </span>
-            <span>
+            <span
+              aria-label="posted-time"
+            >
               Jan 19, 2023
             </span>
           </div>
@@ -239,21 +266,23 @@ exports[`changes the class when hovered 1`] = `
       </div>
     </div>
     <div
-      className="sc-dkrFOg ZdEHA"
+      className="sc-eDvSVe erSdmQ"
     >
-      <div>
+      <div
+        aria-label="news-story"
+      >
         <div
-          className="sc-kDvujY gbNWAm"
+          className="sc-ipEyDJ KSSCD"
         >
           <div
-            className="sc-jrcTuL irwjLS"
+            className="sc-kDvujY faROvf"
           >
             <div
-              className="sc-pyfCe"
+              className="sc-jrcTuL"
             >
               871 points by 
               <span
-                className="sc-bqWxrE fNkYYh"
+                className="sc-ksBlkl lbYNbX"
               >
                 ColinWright
               </span>
@@ -263,28 +292,30 @@ exports[`changes the class when hovered 1`] = `
             </div>
           </div>
           <div
-            className="sc-eDWCr cxkhV"
+            className="sc-bqWxrE gpQyvZ"
           />
           <h2
-            className="sc-gKPRtg boVKvv"
+            className="sc-iBYQkv iijhMY"
             onClick={[Function]}
           >
             <span
-              className="sc-iBYQkv hGcsIc"
+              className="sc-ftTHYK eunGkG"
             >
               Wobbly clock
             </span>
           </h2>
           <div
-            className="sc-ipEyDJ bheiSH"
+            className="sc-csuSiG fwVXDo"
           >
             <span
-              className="sc-iBYQkv hGcsIc"
+              className="sc-ftTHYK eunGkG"
               onClick={[Function]}
             >
               View 195 Comments
             </span>
-            <span>
+            <span
+              aria-label="posted-time"
+            >
               Jan 16, 2023
             </span>
           </div>
@@ -292,21 +323,23 @@ exports[`changes the class when hovered 1`] = `
       </div>
     </div>
     <div
-      className="sc-dkrFOg ZdEHA"
+      className="sc-eDvSVe erSdmQ"
     >
-      <div>
+      <div
+        aria-label="news-story"
+      >
         <div
-          className="sc-kDvujY gbNWAm"
+          className="sc-ipEyDJ KSSCD"
         >
           <div
-            className="sc-jrcTuL irwjLS"
+            className="sc-kDvujY faROvf"
           >
             <div
-              className="sc-pyfCe"
+              className="sc-jrcTuL"
             >
               861 points by 
               <span
-                className="sc-bqWxrE fNkYYh"
+                className="sc-ksBlkl lbYNbX"
               >
                 ValentineC
               </span>
@@ -316,28 +349,30 @@ exports[`changes the class when hovered 1`] = `
             </div>
           </div>
           <div
-            className="sc-eDWCr cxkhV"
+            className="sc-bqWxrE gpQyvZ"
           />
           <h2
-            className="sc-gKPRtg boVKvv"
+            className="sc-iBYQkv iijhMY"
             onClick={[Function]}
           >
             <span
-              className="sc-iBYQkv hGcsIc"
+              className="sc-ftTHYK eunGkG"
             >
               MacBook Pro featuring M2 Pro and M2 Max
             </span>
           </h2>
           <div
-            className="sc-ipEyDJ bheiSH"
+            className="sc-csuSiG fwVXDo"
           >
             <span
-              className="sc-iBYQkv hGcsIc"
+              className="sc-ftTHYK eunGkG"
               onClick={[Function]}
             >
               View 1025 Comments
             </span>
-            <span>
+            <span
+              aria-label="posted-time"
+            >
               Jan 17, 2023
             </span>
           </div>
@@ -345,21 +380,23 @@ exports[`changes the class when hovered 1`] = `
       </div>
     </div>
     <div
-      className="sc-dkrFOg ZdEHA"
+      className="sc-eDvSVe erSdmQ"
     >
-      <div>
+      <div
+        aria-label="news-story"
+      >
         <div
-          className="sc-kDvujY gbNWAm"
+          className="sc-ipEyDJ KSSCD"
         >
           <div
-            className="sc-jrcTuL irwjLS"
+            className="sc-kDvujY faROvf"
           >
             <div
-              className="sc-pyfCe"
+              className="sc-jrcTuL"
             >
               860 points by 
               <span
-                className="sc-bqWxrE fNkYYh"
+                className="sc-ksBlkl lbYNbX"
               >
                 subharmonicon
               </span>
@@ -369,28 +406,30 @@ exports[`changes the class when hovered 1`] = `
             </div>
           </div>
           <div
-            className="sc-eDWCr cxkhV"
+            className="sc-bqWxrE gpQyvZ"
           />
           <h2
-            className="sc-gKPRtg boVKvv"
+            className="sc-iBYQkv iijhMY"
             onClick={[Function]}
           >
             <span
-              className="sc-iBYQkv hGcsIc"
+              className="sc-ftTHYK eunGkG"
             >
               Photos capture life inside a drop of seawater
             </span>
           </h2>
           <div
-            className="sc-ipEyDJ bheiSH"
+            className="sc-csuSiG fwVXDo"
           >
             <span
-              className="sc-iBYQkv hGcsIc"
+              className="sc-ftTHYK eunGkG"
               onClick={[Function]}
             >
               View 187 Comments
             </span>
-            <span>
+            <span
+              aria-label="posted-time"
+            >
               Jan 19, 2023
             </span>
           </div>
@@ -398,21 +437,23 @@ exports[`changes the class when hovered 1`] = `
       </div>
     </div>
     <div
-      className="sc-dkrFOg ZdEHA"
+      className="sc-eDvSVe erSdmQ"
     >
-      <div>
+      <div
+        aria-label="news-story"
+      >
         <div
-          className="sc-kDvujY gbNWAm"
+          className="sc-ipEyDJ KSSCD"
         >
           <div
-            className="sc-jrcTuL irwjLS"
+            className="sc-kDvujY faROvf"
           >
             <div
-              className="sc-pyfCe"
+              className="sc-jrcTuL"
             >
               841 points by 
               <span
-                className="sc-bqWxrE fNkYYh"
+                className="sc-ksBlkl lbYNbX"
               >
                 blegh
               </span>
@@ -422,28 +463,30 @@ exports[`changes the class when hovered 1`] = `
             </div>
           </div>
           <div
-            className="sc-eDWCr cxkhV"
+            className="sc-bqWxrE gpQyvZ"
           />
           <h2
-            className="sc-gKPRtg boVKvv"
+            className="sc-iBYQkv iijhMY"
             onClick={[Function]}
           >
             <span
-              className="sc-iBYQkv hGcsIc"
+              className="sc-ftTHYK eunGkG"
             >
               What not to write on your security clearance form (1988)
             </span>
           </h2>
           <div
-            className="sc-ipEyDJ bheiSH"
+            className="sc-csuSiG fwVXDo"
           >
             <span
-              className="sc-iBYQkv hGcsIc"
+              className="sc-ftTHYK eunGkG"
               onClick={[Function]}
             >
               View 531 Comments
             </span>
-            <span>
+            <span
+              aria-label="posted-time"
+            >
               Jan 19, 2023
             </span>
           </div>
@@ -451,21 +494,23 @@ exports[`changes the class when hovered 1`] = `
       </div>
     </div>
     <div
-      className="sc-dkrFOg ZdEHA"
+      className="sc-eDvSVe erSdmQ"
     >
-      <div>
+      <div
+        aria-label="news-story"
+      >
         <div
-          className="sc-kDvujY gbNWAm"
+          className="sc-ipEyDJ KSSCD"
         >
           <div
-            className="sc-jrcTuL irwjLS"
+            className="sc-kDvujY faROvf"
           >
             <div
-              className="sc-pyfCe"
+              className="sc-jrcTuL"
             >
               708 points by 
               <span
-                className="sc-bqWxrE fNkYYh"
+                className="sc-ksBlkl lbYNbX"
               >
                 chazeon
               </span>
@@ -475,29 +520,88 @@ exports[`changes the class when hovered 1`] = `
             </div>
           </div>
           <div
-            className="sc-eDWCr cxkhV"
+            className="sc-bqWxrE gpQyvZ"
           />
           <h2
-            className="sc-gKPRtg boVKvv"
+            className="sc-iBYQkv iijhMY"
             onClick={[Function]}
           >
             <span
-              className="sc-iBYQkv hGcsIc"
+              className="sc-ftTHYK eunGkG"
             >
               The Shit Show
             </span>
           </h2>
           <div
-            className="sc-ipEyDJ bheiSH"
+            className="sc-csuSiG fwVXDo"
           >
             <span
-              className="sc-iBYQkv hGcsIc"
+              className="sc-ftTHYK eunGkG"
               onClick={[Function]}
             >
               View 315 Comments
             </span>
-            <span>
+            <span
+              aria-label="posted-time"
+            >
               Jan 15, 2023
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-eDvSVe erSdmQ"
+    >
+      <div
+        aria-label="news-story"
+      >
+        <div
+          className="sc-ipEyDJ KSSCD"
+        >
+          <div
+            className="sc-kDvujY faROvf"
+          >
+            <div
+              className="sc-jrcTuL"
+            >
+              647 points by 
+              <span
+                className="sc-ksBlkl lbYNbX"
+              >
+                georgehill
+              </span>
+               
+              <br />
+              (reuters.com)
+            </div>
+          </div>
+          <div
+            className="sc-bqWxrE gpQyvZ"
+          />
+          <h2
+            className="sc-iBYQkv iijhMY"
+            onClick={[Function]}
+          >
+            <span
+              className="sc-ftTHYK eunGkG"
+            >
+              Microsoft to lay off 11k employees
+            </span>
+          </h2>
+          <div
+            className="sc-csuSiG fwVXDo"
+          >
+            <span
+              className="sc-ftTHYK eunGkG"
+              onClick={[Function]}
+            >
+              View 453 Comments
+            </span>
+            <span
+              aria-label="posted-time"
+            >
+              Jan 17, 2023
             </span>
           </div>
         </div>
