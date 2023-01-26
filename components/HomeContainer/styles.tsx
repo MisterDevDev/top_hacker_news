@@ -19,6 +19,9 @@ export const StyledTitle = styled.h1`
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  @media only screen and (max-width: 768px) {
+    font-size: 5em;
+  }
 `;
 
 export const StyledGradientText = styled.h4`
@@ -36,6 +39,9 @@ export const StyledGradientText = styled.h4`
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  @media only screen and (max-width: 768px) {
+    font-size: 2em;
+  }
 `;
 
 export const StyledSubtitleBox = styled.div`

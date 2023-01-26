@@ -21,12 +21,12 @@ exports[`Should render correctly 1`] = `
       className="sc-hLBbgP iqoPhb"
     >
       <h1
-        className="sc-gswNZR hPqQLD"
+        className="sc-gswNZR EuVCO"
       >
         Hacker News
       </h1>
       <h4
-        className="sc-dkrFOg jFdKDg"
+        className="sc-dkrFOg iqOGGe"
       >
         <i>
           Top 100
